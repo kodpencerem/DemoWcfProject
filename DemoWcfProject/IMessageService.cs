@@ -2,11 +2,11 @@
 
 namespace DemoWcfProject
 {
-    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IDemoWcfService" in both code and config file together.
+    // NOTE: You can use the "Rename" command on the "Refactor" menu to change the interface name "IMessageService" in both code and config file together.
     [ServiceContract]
-    public interface IDemoWcfService
+    public interface IMessageService
     {
         [OperationContract]
-        void DoWork();
+        string GetMessage(string message);
     }
 }
