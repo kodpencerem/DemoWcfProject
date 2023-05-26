@@ -1,9 +1,18 @@
-﻿namespace DemoWcfHost
+﻿using System;
+using System.ServiceModel;
+
+namespace DemoWcfHost
 {
-    internal class Program
+    public class Program
     {
-        static void Main(string[] args)
+        static void Main()
         {
+            using (ServiceHost host = new ServiceHost(typeof(DemoWcfProject.MessageService)))
+            {
+                host.Open();
+                Console.WriteLine("Host is started @ " + DateTime.Now.ToString());
+                Console.ReadLine();
+            }
         }
     }
 }
