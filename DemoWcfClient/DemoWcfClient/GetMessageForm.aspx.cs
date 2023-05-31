@@ -13,5 +13,14 @@ namespace DemoWcfClient
         {
 
         }
+
+        protected void btnGetMessage_Click(object sender, EventArgs e)
+        {
+            GetMessageService.MessageServiceClient client = new GetMessageService.MessageServiceClient("BasicHttpBinding_IMessageService");
+
+            lblGetMessage.Text = client.GetMessage(tbxGetMessage.Text);
+
+
+        }
     }
 }

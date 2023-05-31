@@ -9,10 +9,10 @@
 <body>
     <form id="form1" runat="server">
         <div style="font-family: Arial">
-            <asp:TextBox ID="TextBox1" runat="server"></asp:TextBox>
-            <asp:Button ID="Button1" runat="server" Text="Get Message" />
+            <asp:TextBox ID="tbxGetMessage" runat="server"></asp:TextBox>
+            <asp:Button ID="btnGetMessage" runat="server" Text="Get Message" OnClick="btnGetMessage_Click" />
             <br />
-            <asp:Label ID="Label1" runat="server"></asp:Label>
+            <asp:Label ID="lblGetMessage" runat="server" Font-Bold="true"></asp:Label>
         </div>
     </form>
 </body>

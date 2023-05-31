@@ -7,6 +7,7 @@ namespace DemoWcfHost
     {
         static void Main()
         {
+
             using (ServiceHost host = new ServiceHost(typeof(DemoWcfProject.MessageService)))
             {
                 host.Open();
